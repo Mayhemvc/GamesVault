@@ -56,7 +56,7 @@ O projeto adota uma abordagem didática com **100% de dependências oficiais do 
 
 ## Arquitetura
 
-* **Padrão Monolítico Didático:** A estrutura do aplicativo centraliza cada tela e seus adaptadores diretamente nos arquivos principais (`MainActivity.kt` e `DetailActivity.kt`), simplificando a navegação de código e o ciclo de vida.
+* **Padrão:** A estrutura do aplicativo centraliza cada tela e seus adaptadores diretamente nos arquivos principais (`MainActivity.kt` e `DetailActivity.kt`), simplificando a navegação de código e o ciclo de vida.
 * **Navegação com Intent Explícita:** A transição da tela de listagem para a tela de detalhes é realizada por meio de uma `Intent` explícita, transmitindo apenas o ID (`EXTRA_GAME_ID`). O objeto detalhado é resgatado a partir do repositório/mock data local.
 * **Imutabilidade e Segurança de Tipos:** Modelos de dados representados por `data class` (`GameListItem` e `GameDetail`) com propriedades imutáveis (`val`). Manipulações de estado utilizam funções puras com o método `.copy()`.
 * **Componentes Reutilizáveis:** O layout `badge_layout.xml` funciona como componente reutilizável, sendo usados via `<include>` na lista e inflado via `BadgeLayoutBinding.inflate()` na tela de detalhes.
